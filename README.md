@@ -49,7 +49,7 @@ If you want to run this on something other than Apple Watch S3 on 4.1
 You need to modify this project
 
 ### watchOS 4.0-4.1
-Simple add more offsets to _offsetfinder.c_ and you should be good to go.  
+Simply add more offsets to _offsetfinder.c_ and you should be good to go.  
 For finding offsets you can download watch OTA updates from [ipsw.me](https://ipsw.me) and run [offsetfinder](https://github.com/tihmstar/offsetfinder).
 
 ### watchOS 3.x
