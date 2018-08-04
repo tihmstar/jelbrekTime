@@ -31,15 +31,18 @@ Running this on an apple watch series 3 on watchOS 4.1 will:
     * Wait for Xcode to tell you launching failed
     * Launch the app manually on the watch
     * Accept the trust certificate on the watch
-    * DO NOT CLICK jelbrekTime YET!
-  * Run the Watchkit App through Xcode again!
-    * Again wait for the app to install (this takes ages!!!)
-  * Click on jelbrekTime button in Watchkit App
-  * Wait for the breakpoint to hit in Xcode
-  * Now you can execute shell commands through the debugger by typing:
-    * 'p mysystem("ls /")'
-    * 'p mysystem("id")'
-    * 'p mysystem("ps aux")'
+    * ~~DO NOT CLICK jelbrekTime YET!~~
+  * ~~Run the Watchkit App through Xcode again!~~
+    * ~~Again wait for the app to install (this takes ages!!!)~~
+  * ~~Click on jelbrekTime button in Watchkit App~~
+  * ~~Wait for the breakpoint to hit in Xcode~~
+  * ~~Now you can execute shell commands through the debugger by typing:~~
+    * ~~'p mysystem("ls /")'~~
+    * ~~'p mysystem("id")'~~
+    * ~~'p mysystem("ps aux")'~~
+
+Update: SSH is now working :D  
+To connect to the watch you want to use [companion_proxy](https://ghostbin.com/paste/vvxkk) by [qwertyoruiop](https://twitter.com/qwertyoruiopz/status/707638464523739136)
 
 ## Support more devices
 If you want to run this on something other than Apple Watch S3 on 4.1

