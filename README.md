@@ -45,7 +45,7 @@ Update: SSH is now working :D
 To connect to the watch you want to use [companion_proxy](https://ghostbin.com/paste/vvxkk) by [qwertyoruiop](https://twitter.com/qwertyoruiopz/status/707638464523739136)
 
 ## Support more devices
-If you want to run this on something other than Apple Watch S3 on 4.1
+If you want to run this on anything other than Apple Watch S3 on 4.1
 You need to modify this project
 
 ### watchOS 4.0-4.1
