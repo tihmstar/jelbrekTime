@@ -1,5 +1,5 @@
 # jelbrekTime
-An almost complete developer jailbreak for Apple watch S3 watchOS 4.1  
+A developer jailbreak for Apple watch S3 watchOS 4.1  
 Running this on an apple watch series 3 on watchOS 4.1 will:
 
 ## Features
@@ -25,7 +25,7 @@ Running this on an apple watch series 3 on watchOS 4.1 will:
   * Build and run iOS app on Phone
     * On the phone go to Settings->General->Profiles and trust your certificate
     * Run iOS app on the phone through Xcode again
-  * Open jailbreak.m and set a breakpoint at the bottom where it says 'SET A BREAKPOINT HERE'
+  * ~Open jailbreak.m and set a breakpoint at the bottom where it says 'SET A BREAKPOINT HERE'~
   * Build and run Watchkit App on the watch
     * Wait for the app to install (this takes ages!!!)
     * Wait for Xcode to tell you launching failed
