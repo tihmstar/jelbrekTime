@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		870DF67C2104CDEA004D99FE /* exploit.m in Sources */ = {isa = PBXBuildFile; fileRef = 870DF67B2104CDEA004D99FE /* exploit.m */; };
+		870DF67F2104CE0F004D99FE /* offsetfinder.c in Sources */ = {isa = PBXBuildFile; fileRef = 870DF67D2104CE0F004D99FE /* offsetfinder.c */; };
+		87587CA220FF6B5D003A43E9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87587CA120FF6B5D003A43E9 /* IOKit.framework */; };
+		8770621C20FF363200A2B2F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8770621B20FF363200A2B2F5 /* AppDelegate.m */; };
+		8770621F20FF363200A2B2F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8770621E20FF363200A2B2F5 /* ViewController.m */; };
+		8770622220FF363200A2B2F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8770622020FF363200A2B2F5 /* Main.storyboard */; };
+		8770622420FF363200A2B2F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8770622320FF363200A2B2F5 /* Assets.xcassets */; };
+		8770622720FF363200A2B2F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8770622520FF363200A2B2F5 /* LaunchScreen.storyboard */; };
+		8770622A20FF363200A2B2F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8770622920FF363200A2B2F5 /* main.m */; };
+		8770622E20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8770622D20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App.app */; };
+		8770623620FF363300A2B2F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8770623520FF363300A2B2F5 /* Assets.xcassets */; };
+		8770624320FF363300A2B2F5 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8770624220FF363300A2B2F5 /* InterfaceController.m */; };
+		8770624620FF363300A2B2F5 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8770624520FF363300A2B2F5 /* ExtensionDelegate.m */; };
+		8770624820FF363400A2B2F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8770624720FF363400A2B2F5 /* Assets.xcassets */; };
+		87BAEB50210A6CF300DA965D /* jailbreak.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BAEB4F210A6CF300DA965D /* jailbreak.m */; };
+		87CD895F211449C2003961DB /* tar in Resources */ = {isa = PBXBuildFile; fileRef = 87CD895E211449C2003961DB /* tar */; };
+		87CD8962211449E4003961DB /* bootstrap.tar in Resources */ = {isa = PBXBuildFile; fileRef = 87CD8961211449E4003961DB /* bootstrap.tar */; };
+		87E05589210A4DB1001C2D4E /* jelbrekT1m3 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8770623C20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		87E171D62115E6C400574E10 /* patchfinder.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E171D52115E6C400574E10 /* patchfinder.o */; };
+		87FCB061210B03D5001F81A5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8770623220FF363200A2B2F5 /* Interface.storyboard */; };
+		87FCB062210B048C001F81A5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8770623220FF363200A2B2F5 /* Interface.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8770622F20FF363200A2B2F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8770620F20FF363200A2B2F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8770622C20FF363200A2B2F5;
+			remoteInfo = "jelbrekT1m3 WatchKit App";
+		};
+		87E0558A210A4DB1001C2D4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8770620F20FF363200A2B2F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8770623B20FF363300A2B2F5;
+			remoteInfo = "jelbrekT1m3 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8770625320FF363400A2B2F5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8770622E20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E0558C210A4DB1001C2D4E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				87E05589210A4DB1001C2D4E /* jelbrekT1m3 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		870DF67A2104CDEA004D99FE /* exploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exploit.h; sourceTree = "<group>"; };
+		870DF67B2104CDEA004D99FE /* exploit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exploit.m; sourceTree = "<group>"; };
+		870DF67D2104CE0F004D99FE /* offsetfinder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = offsetfinder.c; sourceTree = "<group>"; };
+		870DF67E2104CE0F004D99FE /* offsetfinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = offsetfinder.h; sourceTree = "<group>"; };
+		87587C9920FF65E7003A43E9 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		87587CA120FF6B5D003A43E9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
+		8770621720FF363200A2B2F5 /* jelbrekT1m3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jelbrekT1m3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8770621A20FF363200A2B2F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8770621B20FF363200A2B2F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8770621D20FF363200A2B2F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8770621E20FF363200A2B2F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8770622120FF363200A2B2F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8770622320FF363200A2B2F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8770622620FF363200A2B2F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8770622820FF363200A2B2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8770622920FF363200A2B2F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8770622D20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jelbrekT1m3 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8770623320FF363200A2B2F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8770623520FF363300A2B2F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8770623720FF363300A2B2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8770623C20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "jelbrekT1m3 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8770624120FF363300A2B2F5 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		8770624220FF363300A2B2F5 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		8770624420FF363300A2B2F5 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		8770624520FF363300A2B2F5 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		8770624720FF363400A2B2F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8770624920FF363400A2B2F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BAEB4E210A6CF300DA965D /* jailbreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jailbreak.h; sourceTree = "<group>"; };
+		87BAEB4F210A6CF300DA965D /* jailbreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jailbreak.m; sourceTree = "<group>"; };
+		87BAEB52210A6D9900DA965D /* patchfinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchfinder.h; sourceTree = "<group>"; };
+		87BAEB54210A6DB800DA965D /* sbops.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sbops.h; sourceTree = "<group>"; };
+		87CD895E211449C2003961DB /* tar */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = tar; sourceTree = "<group>"; };
+		87CD8961211449E4003961DB /* bootstrap.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = bootstrap.tar; sourceTree = "<group>"; };
+		87E171D52115E6C400574E10 /* patchfinder.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = patchfinder.o; path = "jelbrekT1m3 WatchKit Extension/patchfinder.o"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8770621420FF363200A2B2F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8770623920FF363300A2B2F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E171D62115E6C400574E10 /* patchfinder.o in Frameworks */,
+				87587CA220FF6B5D003A43E9 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87587CA020FF6B5C003A43E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87E171D52115E6C400574E10 /* patchfinder.o */,
+				87587CA120FF6B5D003A43E9 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8770620E20FF363200A2B2F5 = {
+			isa = PBXGroup;
+			children = (
+				8770621920FF363200A2B2F5 /* jelbrekT1m3 */,
+				8770623120FF363200A2B2F5 /* jelbrekT1m3 WatchKit App */,
+				8770624020FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension */,
+				8770621820FF363200A2B2F5 /* Products */,
+				87587CA020FF6B5C003A43E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8770621820FF363200A2B2F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8770621720FF363200A2B2F5 /* jelbrekT1m3.app */,
+				8770622D20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App.app */,
+				8770623C20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8770621920FF363200A2B2F5 /* jelbrekT1m3 */ = {
+			isa = PBXGroup;
+			children = (
+				8770621A20FF363200A2B2F5 /* AppDelegate.h */,
+				8770621B20FF363200A2B2F5 /* AppDelegate.m */,
+				8770621D20FF363200A2B2F5 /* ViewController.h */,
+				8770621E20FF363200A2B2F5 /* ViewController.m */,
+				8770622020FF363200A2B2F5 /* Main.storyboard */,
+				8770622320FF363200A2B2F5 /* Assets.xcassets */,
+				8770622520FF363200A2B2F5 /* LaunchScreen.storyboard */,
+				8770622820FF363200A2B2F5 /* Info.plist */,
+				8770622920FF363200A2B2F5 /* main.m */,
+			);
+			path = jelbrekT1m3;
+			sourceTree = "<group>";
+		};
+		8770623120FF363200A2B2F5 /* jelbrekT1m3 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8770623220FF363200A2B2F5 /* Interface.storyboard */,
+				8770623520FF363300A2B2F5 /* Assets.xcassets */,
+				8770623720FF363300A2B2F5 /* Info.plist */,
+			);
+			path = "jelbrekT1m3 WatchKit App";
+			sourceTree = "<group>";
+		};
+		8770624020FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87CD8960211449CF003961DB /* resources */,
+				8770624120FF363300A2B2F5 /* InterfaceController.h */,
+				8770624220FF363300A2B2F5 /* InterfaceController.m */,
+				87BAEB54210A6DB800DA965D /* sbops.h */,
+				87BAEB52210A6D9900DA965D /* patchfinder.h */,
+				87BAEB4E210A6CF300DA965D /* jailbreak.h */,
+				87BAEB4F210A6CF300DA965D /* jailbreak.m */,
+				87587C9920FF65E7003A43E9 /* common.h */,
+				870DF67E2104CE0F004D99FE /* offsetfinder.h */,
+				870DF67D2104CE0F004D99FE /* offsetfinder.c */,
+				870DF67A2104CDEA004D99FE /* exploit.h */,
+				870DF67B2104CDEA004D99FE /* exploit.m */,
+				8770624420FF363300A2B2F5 /* ExtensionDelegate.h */,
+				8770624520FF363300A2B2F5 /* ExtensionDelegate.m */,
+				8770624720FF363400A2B2F5 /* Assets.xcassets */,
+				8770624920FF363400A2B2F5 /* Info.plist */,
+			);
+			path = "jelbrekT1m3 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		87CD8960211449CF003961DB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				87CD8961211449E4003961DB /* bootstrap.tar */,
+				87CD895E211449C2003961DB /* tar */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8770621620FF363200A2B2F5 /* jelbrekT1m3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8770625420FF363400A2B2F5 /* Build configuration list for PBXNativeTarget "jelbrekT1m3" */;
+			buildPhases = (
+				8770621320FF363200A2B2F5 /* Sources */,
+				8770621420FF363200A2B2F5 /* Frameworks */,
+				8770621520FF363200A2B2F5 /* Resources */,
+				8770625320FF363400A2B2F5 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8770623020FF363200A2B2F5 /* PBXTargetDependency */,
+			);
+			name = jelbrekT1m3;
+			productName = jelbrekT1m3;
+			productReference = 8770621720FF363200A2B2F5 /* jelbrekT1m3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8770622C20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8770625020FF363400A2B2F5 /* Build configuration list for PBXNativeTarget "jelbrekT1m3 WatchKit App" */;
+			buildPhases = (
+				8770622B20FF363200A2B2F5 /* Resources */,
+				87E0558C210A4DB1001C2D4E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87E0558B210A4DB1001C2D4E /* PBXTargetDependency */,
+			);
+			name = "jelbrekT1m3 WatchKit App";
+			productName = "jelbrekT1m3 WatchKit App";
+			productReference = 8770622D20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8770623B20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8770624C20FF363400A2B2F5 /* Build configuration list for PBXNativeTarget "jelbrekT1m3 WatchKit Extension" */;
+			buildPhases = (
+				8770623820FF363300A2B2F5 /* Sources */,
+				8770623920FF363300A2B2F5 /* Frameworks */,
+				8770623A20FF363300A2B2F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jelbrekT1m3 WatchKit Extension";
+			productName = "jelbrekT1m3 WatchKit Extension";
+			productReference = 8770623C20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8770620F20FF363200A2B2F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tihmstar;
+				TargetAttributes = {
+					8770621620FF363200A2B2F5 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					8770622C20FF363200A2B2F5 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					8770623B20FF363300A2B2F5 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8770621220FF363200A2B2F5 /* Build configuration list for PBXProject "jelbrekTime" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8770620E20FF363200A2B2F5;
+			productRefGroup = 8770621820FF363200A2B2F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8770621620FF363200A2B2F5 /* jelbrekT1m3 */,
+				8770622C20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App */,
+				8770623B20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8770621520FF363200A2B2F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8770622720FF363200A2B2F5 /* LaunchScreen.storyboard in Resources */,
+				8770622420FF363200A2B2F5 /* Assets.xcassets in Resources */,
+				8770622220FF363200A2B2F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8770622B20FF363200A2B2F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87FCB062210B048C001F81A5 /* Interface.storyboard in Resources */,
+				8770623620FF363300A2B2F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8770623A20FF363300A2B2F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87CD8962211449E4003961DB /* bootstrap.tar in Resources */,
+				87CD895F211449C2003961DB /* tar in Resources */,
+				87FCB061210B03D5001F81A5 /* Interface.storyboard in Resources */,
+				8770624820FF363400A2B2F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8770621320FF363200A2B2F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8770621F20FF363200A2B2F5 /* ViewController.m in Sources */,
+				8770622A20FF363200A2B2F5 /* main.m in Sources */,
+				8770621C20FF363200A2B2F5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8770623820FF363300A2B2F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870DF67F2104CE0F004D99FE /* offsetfinder.c in Sources */,
+				870DF67C2104CDEA004D99FE /* exploit.m in Sources */,
+				8770624620FF363300A2B2F5 /* ExtensionDelegate.m in Sources */,
+				8770624320FF363300A2B2F5 /* InterfaceController.m in Sources */,
+				87BAEB50210A6CF300DA965D /* jailbreak.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8770623020FF363200A2B2F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8770622C20FF363200A2B2F5 /* jelbrekT1m3 WatchKit App */;
+			targetProxy = 8770622F20FF363200A2B2F5 /* PBXContainerItemProxy */;
+		};
+		87E0558B210A4DB1001C2D4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8770623B20FF363300A2B2F5 /* jelbrekT1m3 WatchKit Extension */;
+			targetProxy = 87E0558A210A4DB1001C2D4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8770622020FF363200A2B2F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8770622120FF363200A2B2F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8770622520FF363200A2B2F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8770622620FF363200A2B2F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8770623220FF363200A2B2F5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8770623320FF363200A2B2F5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8770624A20FF363400A2B2F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8770624B20FF363400A2B2F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8770624D20FF363400A2B2F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "jelbrekT1m3 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.jelbrekT1m3.watchkitapp.extension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		8770624E20FF363400A2B2F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "jelbrekT1m3 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.jelbrekT1m3.watchkitapp.extension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		8770625120FF363400A2B2F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = jelbrekT1m3_WatchKit_Extension;
+				INFOPLIST_FILE = "jelbrekT1m3 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.jelbrekT1m3.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		8770625220FF363400A2B2F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = jelbrekT1m3_WatchKit_Extension;
+				INFOPLIST_FILE = "jelbrekT1m3 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.jelbrekT1m3.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		8770625520FF363400A2B2F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = jelbrekT1m3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.jelbrekT1m3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8770625620FF363400A2B2F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = jelbrekT1m3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.jelbrekT1m3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8770621220FF363200A2B2F5 /* Build configuration list for PBXProject "jelbrekTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8770624A20FF363400A2B2F5 /* Debug */,
+				8770624B20FF363400A2B2F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8770624C20FF363400A2B2F5 /* Build configuration list for PBXNativeTarget "jelbrekT1m3 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8770624D20FF363400A2B2F5 /* Debug */,
+				8770624E20FF363400A2B2F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8770625020FF363400A2B2F5 /* Build configuration list for PBXNativeTarget "jelbrekT1m3 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8770625120FF363400A2B2F5 /* Debug */,
+				8770625220FF363400A2B2F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8770625420FF363400A2B2F5 /* Build configuration list for PBXNativeTarget "jelbrekT1m3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8770625520FF363400A2B2F5 /* Debug */,
+				8770625620FF363400A2B2F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8770620F20FF363200A2B2F5 /* Project object */;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.12" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224.3"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="136" height="60" alignment="left" text="jelbrekTime" numberOfLines="3" id="pGc-Uq-MHx"/>
+                        <button width="1" alignment="left" title="jelbrek" enabled="NO" id="EdW-VF-5LO">
+                            <connections>
+                                <action selector="jelbrekPressed" destination="AgC-eL-Hgc" id="2Ts-GP-e7e"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="jbButton" destination="EdW-VF-5LO" id="ShR-Of-XJ0"/>
+                        <outlet property="statusLabel" destination="pGc-Uq-MHx" id="wZC-rx-ssp"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
