@@ -5,7 +5,7 @@ Running this on an apple watch series 3 on watchOS 4.1 will:
 ## Features
   * Exploits kernel using v0rtex
   * Gets tfp0 and stores it to hsp4
-  * Applies h3lix kernelpacthes
+  * Applies h3lix kernelpatches
   * Remounts / as rw
   * Extracts bootstrap.tar
 
